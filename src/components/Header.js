@@ -17,9 +17,6 @@ function Header({ bgColor, textColor }) {
 				<Link className="navlink" to="/about">
 					About
 				</Link>
-				<Link className="navlink" to="/polls">
-					PollMaker
-				</Link>
 			</nav>
 		</header>
 	)
