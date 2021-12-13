@@ -1,0 +1,29 @@
+{
+  "feedback": [
+    {
+      "id": 1,
+      "rating": 10,
+      "text": "this item is from json server"
+    },
+    {
+      "id": 2,
+      "rating": 8,
+      "text": "this item is also from json server backend"
+    },
+    {
+      "text": "this is a terrible app",
+      "rating": 3,
+      "id": 3
+    },
+    {
+      "text": "this is the worst thing ever",
+      "rating": 1,
+      "id": 4
+    },
+    {
+      "text": "updated update update",
+      "rating": 8,
+      "id": 5
+    }
+  ]
+}
