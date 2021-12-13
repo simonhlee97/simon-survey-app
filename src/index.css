@@ -13,6 +13,16 @@ body {
 	line-height: 1.6;
 }
 
+.navlink {
+	margin: 0 2em;
+	color: #fff;
+	text-decoration: none;
+}
+.navlink:hover {
+	color: grey;
+	text-decoration: underline;
+}
+
 ul {
 	list-style: none;
 }
@@ -21,6 +31,10 @@ ul {
 	max-width: 768px;
 	margin: auto;
 	padding: 0 20px;
+}
+.navbar-container {
+	margin: auto;
+	padding: 1em 4em;
 }
 
 header {

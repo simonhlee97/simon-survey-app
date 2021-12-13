@@ -1,22 +1,31 @@
 import PropTypes from 'prop-types'
-
-function Header({ text, bgColor, textColor }) {
-	const headerStyles = {
+import { Link } from 'react-router-dom'
+function Header({ bgColor, textColor }) {
+	const navbar = {
+		display: 'flex',
+		justifyContent: 'center',
 		backgroundColor: bgColor,
-		color: textColor,
+		color: '#f5f5f5',
 	}
 
 	return (
-		<header style={headerStyles}>
-			<div className="container">
-				<h2>{text}</h2>
-			</div>
+		<header>
+			<nav style={navbar} className="navbar-container">
+				<Link className="navlink" to="/">
+					FeedBacker
+				</Link>
+				<Link className="navlink" to="/about">
+					About
+				</Link>
+				<Link className="navlink" to="/polls">
+					PollMaker
+				</Link>
+			</nav>
 		</header>
 	)
 }
 
 Header.defaultProps = {
-	text: 'Feedback UI',
 	bgColor: 'rgba(0,0,0,0.4)',
 	textColor: '#ff6a95',
 }
