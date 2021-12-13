@@ -10,7 +10,17 @@ export const FeedbackProvider = ({ children }) => {
 			text: 'this item is from Context',
 			rating: 9,
 		},
+		{
+			id: 2,
+			text: 'a lorem ipsum item from Context',
+			rating: 7,
+		},
 	])
+
+	const [feedbackEdit, setFeedbackEdit] = useState({
+		item: {},
+		edit: false,
+	})
 
 	const deleteFeedback = (id) => {
 		// console.log('App', id)
@@ -25,12 +35,28 @@ export const FeedbackProvider = ({ children }) => {
 		setFeedback([newFeedback, ...feedback])
 	}
 
+	// Update feedback item
+	const updateFeedback = (id, updItem) => {
+		setFeedback(feedback.map((item) => (item.id === id ? { ...item, ...updItem } : item)))
+	}
+
+	// turn on EDIT MODE for item to be updated
+	const editFeedback = (item) => {
+		setFeedbackEdit({
+			item,
+			edit: true,
+		})
+	}
+
 	return (
 		<FeedbackContext.Provider
 			value={{
 				feedback,
+				feedbackEdit,
 				deleteFeedback,
 				addFeedback,
+				editFeedback,
+				updateFeedback,
 			}}>
 			{children}
 		</FeedbackContext.Provider>
